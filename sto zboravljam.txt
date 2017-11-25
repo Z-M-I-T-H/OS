@@ -1,0 +1,33 @@
+--DS(init declarations of global & static variables) - default val 0 -
+For instance the global string defined by char s[] = “hello world” in C and a C statement like int debug=1 outside the main (i.e. global) would be stored in initialized read-write area. And a global C statement like const char* string = “hello world” makes the string literal “hello world” to be stored in initialized read-only area and the character pointer variable string in initialized read-write area.
+--BSS(uninit declarations of global & static vars) -block started by symbol- kernel's starting point(adress 0 arithmetic)
+--Stek -static allocation-
+--Hip -dynamic allocation-
+
+man 1 size
+	  size exec_name
+	  objdump -t exec_name | grep varName
+
+ACCESS MODIFICATORS -- storage-class -- LINKER is in charge
+
+public like - global variable is declared in file1. If you try to use that variable in a different file file2, the compiler will complain. To solve this problem, keyword #extern# is used in file2 to indicate that the external variable is declared in another file.
+
+auto(default)/register/static local_vars
+static(default)/extern global_vars
+
+static global_vars/funcs - encapculation (private like)
+
+extern is by (TU - translation unit) default for func prototype
+
+
+in file.h, func prototype without parameters must have dummy void
+void func(void)
+
+C is block scoped, but some languages are func scoped.
+
+STAGES OF COMPILATION
+
+preprocesing gcc -E
+kompilacija gcc -S
+asempliranje gcc -c
+linkovanje gcc -o
