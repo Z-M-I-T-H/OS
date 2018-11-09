@@ -1,1 +1,9 @@
-Operating systems as subject is good for something. And now I can do something. But I don't use opensource apps so much. Just doing internet things. Google Chrome is my main program. HELP! :/
+# RG154-flosxonix
+flosXONIX
+3D-верзија игрице "XONIX". Сврха игре је да играч заузме већину територије над платформом где се крећу лоптице. Међутим, играча ометају разне неприлике у разним облицима.
+
+Контроле
+|---|
+|<kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> | мењање смера и правца кретања |
+|<kbd>SPACE</kbd> | пауза |
+|<kbd>esc</kbd> | излазак из програма |
