@@ -1,0 +1,61 @@
+body
+{
+	background-image: url('bg.jpg');
+	/*background-attachment: fixed;
+	background: no-repeat;*/
+	background-size: 100%;
+	color: #fff;
+	margin: 0;
+	font-family: monospace;
+}
+
+@font-face
+{
+	font-family: temp_font;
+	src: url('https://fonts.googleapis.com/css?family=Fira+Mono');
+}
+
+main
+{
+	width: 600px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-left: 1px solid #ff0;
+	border-right:  5px solid #ff0;
+	margin: auto;
+	margin-bottom: 0;
+	padding: 10px;
+}
+
+footer
+{
+	margin 0;
+	
+	background-color: #fff;
+}
+
+footer > ul
+{
+	margin: auto;
+	padding: 10px;
+	width: 400px;
+	list-style: none;
+}
+
+footer > ul > li
+{
+
+	display: inline-block;
+	background-color: #000;
+	color: #fff;
+	padding: 5px;
+	margin: 5px;
+	margin-bottom: 0;
+	margin-top: 1px;
+}
+
+footer > ul > li > a
+{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}

@@ -1,0 +1,364 @@
+body
+{
+	background-color: #bba;
+	margin: 0;
+	font-family: test-font;
+}
+
+@font-face{
+	font-family: test-font;
+	src: url('./libel-suit-rg.ttf');
+}
+
+.wrapper_grid
+{
+	/*prvi primer*/
+	display: grid;
+	/*
+	grid-template-columns: 70% 30%;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	*/
+	grid-template-columns:repeat(2,1fr);
+	grid-gap: 1em;
+	grid-auto-columns: auto;
+	grid-auto-rows: minmax(100px, auto);
+
+	border: 1px solid #000;
+	margin: auto;
+	max-width: 600px;
+	overflow: hidden;
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: #332;
+}
+
+.wrapper_grid > div
+{
+	margin: 0;
+	padding: 10px;
+	background-color: #aaa;
+}
+
+.wrapper_grid > div:nth-child(odd)
+{
+	background-color: #bbb;
+}
+
+.wrapper_grid > div > *
+{
+	word-break: break-all;
+	font-size: 14px;
+	margin: 0;
+}
+
+.nested {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 70px;
+	grid-gap: 1em;
+	/*justify-items: end;*/
+}
+
+.nested > div{
+	border: 1px solid #fff;
+	text-align: center;
+	
+	padding: 20px;
+}
+
+#boxara {
+	/*align-self: end; *//* justify-items samo za poseban element */
+
+	/*koliko sam ja razumeo, ovo se siri sa njegove pozicije*/
+	/* / - na*/
+	/* onu drugu koja je zeljena */
+	/* Na kraju sam razumeo donekle*/
+	grid-column: 1/3;
+	grid-row: 2/1;
+
+
+}
+
+.container
+{
+	margin: auto;
+	margin-top: 10px;
+	max-width: 600px;
+	min-height: 100%;
+	margin-bottom: 0;
+	position: relative;
+	box-sizing: border-box;
+}
+
+form
+{
+	padding: 10px;
+	margin: 0;
+	background-color: #555;
+	border: 1px solid #000; 
+	box-sizing: border-box;
+}
+
+.form-group label
+{
+	display: block;
+	padding: 2px;
+	color: #fff;
+	padding: 4px;
+	padding-top: 0;
+	padding-left: 10px; 
+	background-color: #000;
+}
+
+.form-group input[type='text'], 
+.form-group textarea
+{
+	padding: 3px;
+	padding-left: 30px;
+	width: 100%;
+	background-color: #eee;
+	font-family: test-font;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+
+form input[type~="button"]
+{
+	background-color: #007;
+	color: #fff;
+	width: 100%;
+	font-family: test-font;
+	font-size: 32px;
+	border: none;
+}
+
+@media(min-width: 768px){
+	.results
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+		grid-column-gap: 1em;
+		margin: 10px;
+	}
+
+	.results > p
+	{
+		margin: 0;
+		padding: 10px;
+		background-color: #eef;
+		word-break: break-all;
+		align-self: start;
+	}
+}
+
+.results
+{
+	margin: 10px;
+	margin-bottom: 5px;
+}
+
+.results > p
+{
+	margin-bottom: 5px;
+	padding: 10px;
+	background-color: #eef;
+	word-break: break-all;
+	align-self: start;
+}
+
+.form-group
+{
+	padding-bottom: 0px;
+}
+
+#box1
+{
+	/*
+		nema uticaj, jer radi samo za one koji floatuju sa desne strane!!
+	*/
+	clear: right;
+}
+
+.personal
+{
+	border-bottom: none;
+	color: #3bd;
+	width: 100%;
+	clear: both;
+	margin-bottom: 0;
+	margin-top: 10px;
+	position: relative;
+	padding: 0;
+	background-color: #FFE;
+	/*border: 1px solid #000;*/
+	box-sizing: border-box;
+	overflow: hidden; 
+	/* bez overflowa nema nista od pakovanja unutrasnjih blokova u spoljasnji */
+
+}
+
+.personal-info
+{
+	
+	width: auto;
+	float: left;
+	clear: right;
+	
+	width: 60%;
+	margin: 0;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 10px;
+	left: 180px;
+}
+
+.personal-info *
+{
+
+	margin: 0;
+	font-size: 30px;
+}
+
+.personal .image
+{
+	float: left;
+	display: block-inline;
+	background-image: url('image.jpg'); 
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	width: 180px;
+	height: 200px;
+	
+	border-left: 10px solid #3bd;
+	border-bottom: none;
+	background-size: auto 250px;
+	background-position: 0px 0;
+}
+
+.personal-info h1
+{
+	border-bottom: 1px solid #3bd;
+	margin: 0;
+	width: 100%;
+	font-size: 50px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.clr
+{
+	width: 0;
+	clear: both;
+	height: 0;
+}
+
+/* FLEXBOX SAMO *ILI* ZA REDOVE *ILI* SAMO ZA KOLONE (ili kao Vbox ili Hbox)*/
+ /*podela redova na jednake delove */
+@media(min-width:768px){
+	/* Unutrasnji css fajl za dati slucaj  ....*/
+	/* kada je manji ekran */
+	/* kada si gledao tutorijal ovde je bilo za vece ekrane, pa nije uopste bilo flex-a */
+	.footer
+	{
+		display: flex;
+		align-items: flex-end;
+		/* align-items: */ /*Za vertikalno poravnjanje odozgo/odozdo/... */
+		/* flex-direction: column; */ /* sve ovo je vertikalno */
+		/*
+		justify-content: flex-start; 
+		*/
+		/* Za horizontalno poravnjanje -||- */
+		flex-wrap: wrap;
+		padding: 10px;
+		margin:0 ;
+		
+		background-position: -300px 0px;
+		background-image: url('https://i.pinimg.com/originals/95/65/eb/9565eb9da7595fc6bd1a78797ffa1694.jpg');
+		margin-top: 20px;
+		flex-basis: 100%; /* width: 100%; */
+		height: 600px;
+		border: 1px solid #000;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+	
+
+}
+
+#box
+	{
+		/*border: 1px solid #fff;*/
+		box-sizing: border-box;
+		flex-basis: 90px;
+		padding: 10px;
+		/*height: 100px;*/
+	}
+
+.color1
+{
+	flex: 1;
+	background-color: #00f;
+}
+
+.color2
+{
+	flex: 2;
+	background-color: #0f0;
+}
+
+.color3
+{
+	flex: 1;
+	background-color: #0ff;
+}
+
+.color4
+{
+	flex: 3;
+	background-color: #f00;
+}
+
+.color5
+{
+	flex: 1;
+	background-color: #f0f;
+}
+
+.color6
+{
+	flex: 1;
+	background-color: #ff0;
+}
+
+.color7
+{
+	flex: 4;
+	background-color: #fff;
+}
+
+.footer
+	{
+		display: flex;
+		align-items: flex-end;
+		/* align-items: */ /*Za vertikalno poravnjanje odozgo/odozdo/... */
+		/* flex-direction: column; */ /* sve ovo je vertikalno */
+		/*
+		justify-content: flex-start; 
+		*/
+		/* Za horizontalno poravnjanje -||- */
+		flex-wrap: wrap;
+		padding: 10px;
+		margin:0 ;
+		
+		background-position: -300px 0px;
+		background-image: url('https://i.pinimg.com/originals/95/65/eb/9565eb9da7595fc6bd1a78797ffa1694.jpg');
+		margin-top: 20px;
+		flex-basis: 100%; /* width: 100%; */
+		height: 600px;
+		border: 1px solid #000;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+

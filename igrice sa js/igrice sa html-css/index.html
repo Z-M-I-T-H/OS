@@ -1,0 +1,142 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+		<title>something for new year</title>
+		<meta charset="utf-8" />
+		<link rel='stylesheet' href="style.css" type='text/css'>
+	</head>
+	<body>
+		<div class='wrapper_grid'>
+			<div class='nested'>
+				<div>Test1</div>
+				<div>Test2</div>
+				<div><a href="../index.html" target="_blank">igriceJS</a></div>
+				<div>Test1</div>
+				<div>Test2</div>
+				<div>Test3</div>
+				<div>Test1</div>
+				<div>Test2</div>
+				<div>Test3</div>
+			</div>
+			<div id='boxara'>
+				<h1>Roadmap to becoming a Web Developer in 2019</h1>
+				<p>https://github.com/kamranahmedse/developer-roadmap/blob/master/readme.md</p>
+			</div>
+			<div>
+				<h1>A new way of blogging about Prolog</h1>
+				<p>https://blog.klipse.tech/prolog/2019/01/01/blog-prolog.html?show</p>
+			</div>
+			<div>
+				<h1>State of UX design tools in 2019 </h1>
+				<p>https://docs.google.com/spreadsheets/d/1rr4nZLgiycd_g1hb8pYbGIr6QJhf99YYUNJochR_KsM/edit#gid=0</p>
+			</div>
+			<div>
+				<h1>Launched Twiverse 2 days ago, made $435, 9K views & 900 registered users</h1>
+				<p>https://www.indiehackers.com/forum/launched-twiverse-2-days-ago-made-435-9k-views-900-registered-users-63d065bcf9</p>
+			</div>
+			<div>
+				<h1>Wasm mozzila won</h1>
+				<p>https://robert.ocallahan.org/2017/06/webassembly-mozilla-won.html</p>
+			</div>
+			<div>
+				<h1>this is based on these tutorials</h1>
+				<p>https://www.youtube.com/watch?v=M3qBpPw77qo - CSSgrid</p>
+				<p>https://www.youtube.com/watch?v=IqeLoGEbXyI - flexbox</p>
+				<p>https://www.youtube.com/watch?v=yfoY53QXEnI - CSS absolute begginers</p>
+			</div>
+			<div>
+				<h1>what should i do in future</h1>
+				<p>Bootstrap, SASS, responsive layout html5, resposive landing page, mobile friendly CSS&HTML
+				https://youtu.be/UnTQVlqmDQ0?t=333</p>
+			</div>
+			
+		</div>
+		<div class='container'>
+			<script type="text/javascript">
+				function do_something()
+				{
+					var name = document.querySelector('input[name="name"]');
+					var email = document.querySelector('input[name="email"]');
+					var msg = document.querySelector('textarea[name="message"]');
+
+
+					var res_msg = document.getElementById('res_msg');
+					var res_email = document.getElementById('res_email');
+					var res_name = document.getElementById('res_name');
+
+					console.log(msg.value);
+					console.log(res_msg.innerHTML);
+					res_msg.innerHTML = msg.value;
+					res_email.innerHTML = email.value;
+					res_name.innerHTML = name.value;
+
+				}
+			</script>
+			<form>
+				<div class='form-group'>
+					<label>Name: </label>
+					<input type='text' name='name'>
+				</div>	
+				<div class='form-group'>
+					<label>Email: </label>
+					<input type='text' name='email'>
+				</div>	
+				<div class='form-group'>
+					<label>Message: ради? Видиш да ради који моји! Људиииии. </label>
+					<textarea name='message'></textarea>
+				</div>	
+				<input type='button' class="button" value='Posalji namerno bas' name='' onclick="do_something()">
+			</form>
+			<div class='results'>
+				<p id='res_name'>Tu sam</p>
+				<p id='res_email'>evo samo</p>
+				<p id='res_msg'>malo sutra</p>
+			</div>
+			
+
+			<div class='footer'>
+				
+				<!-- float, clear, positioning-->
+				
+				<!-- <div id='box'></div>
+				<div id='box'></div>
+				<div id='box box1'></div> 
+				<div id='box'></div>
+				<div id='box'></div>
+				<div class='clr'></div>
+				<div id='box'></div>
+				<div id='box'></div>
+				<div id='box'></div>
+				<div id='box'></div>
+				<div class='clr'></div> -->
+				
+
+				<!-- flexbox -->
+				
+				<div id='box' class='color1'></div>
+				<div id='box' class='color2'></div>
+				<div id='box' class='color3'></div>
+				<div id='box' class='color4'></div>
+				<div id='box' class='color5'></div>
+				<div id='box' class='color6'></div>
+				<div id='box' class='color7'></div>
+				
+			</div>
+			<!-- css grid -->
+			<div class='wrapper'>
+				
+			</div>
+<div class='clr'></div>
+			<div class='personal'>
+				<div class='image'></div>
+				<div class='personal-info'>
+					<h1>Жељко Симић</h1>
+					<p>zeljko.simic96@gmail.com</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
+
